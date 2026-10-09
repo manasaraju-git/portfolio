@@ -1,0 +1,781 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ================= BODY ================= */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #e9eef2;
+    color: #183b56;
+    line-height: 1.6;
+}
+
+
+/* ================= RESUME ================= */
+
+.resume {
+    width: 90%;
+    max-width: 1100px;
+
+    margin: 30px auto;
+
+    padding: 20px;
+
+    background: white;
+
+    border: 1px solid #d5d5d5;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+
+    animation: pageLoad 1s ease;
+}
+
+
+/* ================= HEADER ================= */
+
+.header {
+    display: flex;
+    align-items: center;
+
+    border-bottom: 2px solid #d5d5d5;
+
+    padding-bottom: 20px;
+}
+
+
+/* ================= PROFILE IMAGE ================= */
+
+.profile-photo {
+    width: 32%;
+    overflow: hidden;
+}
+
+.profile-photo img {
+    width: 85%;
+    height: 300px;
+
+    object-fit: cover;
+
+    display: block;
+
+    animation: imageZoom 1.2s ease;
+
+    transition: transform 0.5s ease;
+}
+
+.profile-photo img:hover {
+    transform: scale(1.05);
+}
+
+
+/* ================= HEADER CONTENT ================= */
+
+.header-content {
+    width: 68%;
+
+    padding-left: 30px;
+
+    animation: slideRight 1s ease;
+}
+
+.header-content h1 {
+    font-size: 46px;
+
+    color: #164b73;
+
+    margin-bottom: 8px;
+
+    letter-spacing: 3px;
+
+    animation: headingAnimation 1s ease;
+}
+
+.header-content h3 {
+    font-size: 20px;
+
+    letter-spacing: 3px;
+
+    font-weight: normal;
+
+    color: #234b66;
+}
+
+
+.line {
+    width: 90%;
+
+    height: 2px;
+
+    background-color: #999;
+
+    margin: 10px 0;
+}
+
+
+.contact-info {
+    margin-top: 12px;
+
+    color: #333;
+
+    font-size: 14px;
+}
+
+.contact-info span {
+    margin: 0 8px;
+}
+
+.linkedin {
+    margin-top: 8px;
+
+    font-size: 14px;
+}
+
+.linkedin a {
+    color: #12669b;
+}
+
+.location {
+    color: #555;
+
+    margin-top: 5px;
+
+    font-size: 14px;
+}
+
+
+/* ================= PROFILE ================= */
+
+.profile {
+    margin-top: 20px;
+
+    background-color: #f1f4f6;
+
+    animation: slideUp 1s ease;
+}
+
+.profile p {
+    padding: 20px;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    color: #333;
+}
+
+
+/* ================= SECTION TITLE ================= */
+
+.section-title {
+    background-color: #12669b;
+
+    color: white;
+
+    padding: 11px 18px;
+
+    font-size: 22px;
+
+    letter-spacing: 1px;
+
+    transition: background-color 0.3s ease;
+}
+
+.section-title:hover {
+    background-color: #0d4f79;
+}
+
+
+/* ================= TWO COLUMN ================= */
+
+.main-content {
+    display: flex;
+
+    gap: 25px;
+
+    margin-top: 20px;
+}
+
+.left {
+    width: 55%;
+}
+
+.right {
+    width: 45%;
+}
+
+
+/* ================= COMMON SECTION ================= */
+
+.section {
+    margin-bottom: 25px;
+
+    background-color: #f4f6f7;
+
+    animation: slideUp 1s ease;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.section:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 7px 15px rgba(0, 0, 0, 0.10);
+}
+
+
+/* ================= PROJECTS ================= */
+
+.projects {
+    padding: 20px;
+}
+
+.project-item {
+    padding: 18px 0;
+
+    border-bottom: 1px dashed #aaa;
+
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease;
+}
+
+.project-item:last-child {
+    border-bottom: none;
+}
+
+.project-item:hover {
+    transform: translateX(7px);
+
+    background-color: #eaf3f8;
+}
+
+.project-item h3 {
+    font-size: 19px;
+
+    color: #164b73;
+
+    margin-bottom: 6px;
+}
+
+.project-item p {
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    color: #333;
+}
+
+.year {
+    color: #555;
+
+    font-weight: bold;
+
+    margin-bottom: 8px;
+}
+
+.technologies {
+    margin-top: 10px;
+}
+
+.technologies strong {
+    color: #12669b;
+}
+
+
+/* ================= INTERNSHIP ================= */
+
+.experience {
+    padding: 20px;
+}
+
+.experience-item {
+    padding: 15px 5px;
+}
+
+.experience-item h3 {
+    color: #164b73;
+
+    font-size: 19px;
+
+    margin-bottom: 8px;
+}
+
+.experience-item p {
+    color: #333;
+
+    font-size: 14px;
+}
+
+
+/* ================= EDUCATION ================= */
+
+.education {
+    padding: 20px;
+}
+
+.education-item {
+    padding: 15px 5px;
+
+    border-bottom: 1px dashed #aaa;
+
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease;
+}
+
+.education-item:last-child {
+    border-bottom: none;
+}
+
+.education-item:hover {
+    transform: translateX(7px);
+
+    background-color: #eaf3f8;
+}
+
+.education-item h3 {
+    font-size: 18px;
+
+    color: #164b73;
+
+    margin-bottom: 7px;
+}
+
+.education-item p {
+    font-size: 14px;
+
+    margin-top: 4px;
+
+    color: #333;
+}
+
+
+/* ================= SKILLS ================= */
+
+.skills {
+    padding: 15px 20px;
+}
+
+.skill {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 11px 5px;
+
+    border-bottom: 1px dashed #aaa;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    color: #333;
+
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease;
+}
+
+.skill:last-child {
+    border-bottom: none;
+}
+
+.skill:hover {
+    transform: translateX(7px);
+
+    background-color: #e8f1f7;
+}
+
+
+/* ================= SKILL CIRCLE ================= */
+
+.circle {
+    width: 32px;
+
+    height: 32px;
+
+    min-width: 32px;
+
+    border-radius: 50%;
+
+    background-color: #12669b;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    transition: transform 0.4s ease;
+}
+
+.skill:hover .circle {
+    transform: rotate(360deg) scale(1.1);
+}
+
+
+/* ================= SOFT SKILLS ================= */
+
+.contact {
+    padding: 20px;
+}
+
+.contact p {
+    padding: 11px 0;
+
+    border-bottom: 1px dashed #aaa;
+
+    font-size: 14px;
+
+    color: #333;
+
+    transition:
+        transform 0.3s ease,
+        color 0.3s ease;
+}
+
+.contact p:last-child {
+    border-bottom: none;
+}
+
+.contact p:hover {
+    transform: translateX(7px);
+
+    color: #12669b;
+}
+
+.contact a {
+    color: #12669b;
+
+    text-decoration: none;
+}
+
+
+/* ================= CERTIFICATES ================= */
+
+.certificates {
+    padding: 15px 20px;
+}
+
+.certificate-item {
+    padding: 13px 5px;
+
+    border-bottom: 1px dashed #aaa;
+
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease;
+}
+
+.certificate-item:last-child {
+    border-bottom: none;
+}
+
+.certificate-item:hover {
+    transform: translateX(7px);
+
+    background-color: #eaf3f8;
+}
+
+.certificate-item h3 {
+    font-size: 15px;
+
+    color: #164b73;
+
+    margin-bottom: 4px;
+}
+
+.certificate-item p {
+    font-size: 13px;
+
+    color: #444;
+}
+
+
+/* ================= LANGUAGES ================= */
+
+.languages {
+    padding: 20px;
+}
+
+.language {
+    margin-bottom: 20px;
+}
+
+.language:last-child {
+    margin-bottom: 0;
+}
+
+.language-name {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 8px;
+
+    font-weight: bold;
+}
+
+
+/* ================= LANGUAGE BAR ================= */
+
+.bar {
+    width: 100%;
+
+    height: 14px;
+
+    background-color: #d5dce1;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+.english {
+    width: 85%;
+
+    height: 100%;
+
+    background-color: #12669b;
+
+    animation: englishBar 1.5s ease;
+}
+
+.kannada {
+    width: 95%;
+
+    height: 100%;
+
+    background-color: #12669b;
+
+    animation: kannadaBar 1.5s ease;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    text-align: center;
+
+    padding: 15px;
+
+    color: #12669b;
+
+    font-size: 13px;
+
+    border-top: 1px solid #ddd;
+}
+
+
+/* ================= ANIMATIONS ================= */
+
+@keyframes pageLoad {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes imageZoom {
+
+    from {
+        opacity: 0;
+
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: scale(1);
+    }
+}
+
+
+@keyframes slideRight {
+
+    from {
+        opacity: 0;
+
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateX(0);
+    }
+}
+
+
+@keyframes headingAnimation {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes slideUp {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes englishBar {
+
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 85%;
+    }
+}
+
+
+@keyframes kannadaBar {
+
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 95%;
+    }
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+
+    .resume {
+        width: 95%;
+
+        margin: 15px auto;
+
+        padding: 12px;
+    }
+
+    .header {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .profile-photo {
+        width: 100%;
+
+        display: flex;
+
+        justify-content: center;
+
+        margin-bottom: 20px;
+    }
+
+    .profile-photo img {
+        width: 220px;
+
+        height: 250px;
+    }
+
+    .header-content {
+        width: 100%;
+
+        padding-left: 0;
+    }
+
+    .header-content h1 {
+        font-size: 32px;
+    }
+
+    .header-content h3 {
+        font-size: 16px;
+    }
+
+    .main-content {
+        flex-direction: column;
+    }
+
+    .left,
+    .right {
+        width: 100%;
+    }
+
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 480px) {
+
+    .header-content h1 {
+        font-size: 27px;
+
+        letter-spacing: 1px;
+    }
+
+    .header-content h3 {
+        font-size: 14px;
+
+        letter-spacing: 1px;
+    }
+
+    .section-title {
+        font-size: 18px;
+
+        padding: 9px 12px;
+    }
+
+    .profile p {
+        font-size: 14px;
+    }
+
+    .project-item h3 {
+        font-size: 17px;
+    }
+
+    .education-item h3 {
+        font-size: 16px;
+    }
+
+}
